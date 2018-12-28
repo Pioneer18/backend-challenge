@@ -1,0 +1,25 @@
+{
+  "name": "backend-challenge",
+  "version": "1.0.0",
+  "description": "Application to save physician data into a mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pioneer18/backend-challenge.git"
+  },
+  "keywords": [
+    "backend",
+    "mongoDB",
+    "node.js",
+    "express"
+  ],
+  "author": "Jonathan Sells",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pioneer18/backend-challenge/issues"
+  },
+  "homepage": "https://github.com/Pioneer18/backend-challenge#readme"
+}
