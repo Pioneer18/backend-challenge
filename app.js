@@ -1,3 +1,5 @@
+/*this file - app.js - is the entry point to connect all files together, add additional functionality, and register static files*/
+
 //Dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
