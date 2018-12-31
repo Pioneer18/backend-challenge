@@ -8,7 +8,34 @@ const { get } = require('./get');
 const { update } = require('./update');
 const { list } = require('./list');
 
-/*place documentaion about controllers here*/
+/** 
+*API for physicians
+
+GET /api/v1/physicians - list
+
+GET /api/v1/physicians/:_id - get single physician
+
+POST /api/v1/physicians/ - create
+@param 
+    firstName (require) - {String}
+    lastName (require) - {String}
+    specialty (require) - {String}
+    term (require) - {String}
+    state (require) - {String}
+    facility (require) - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
+
+PUT /api/v1/physicians/ - update
+@param
+    firstName - {String}
+    lastName - {String}
+    specialty - {String}
+    term - {String}
+    state - {String}
+    facility - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
+
+
+
+*/
 
 //each route will have the models passed in as well as the config for config
 module.exports = (models, { config }) => {
