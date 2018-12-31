@@ -3,6 +3,7 @@
 const app = require('./config/express');
 const config = require('./config/env/');
 const mongoose = require('mongoose');
+const api = require('./src/api');
 
 //setup mongoose (enable es6 promises and specify the database name/location)
 mongoose.Promise = Promise;
