@@ -24,7 +24,7 @@ const routersInit = config => {
     //at this reative endpoint, call the physicians controller with access to models and config
     //router.use('/physicians', physicians(models, { config }));
 
-    router.use('/test', () => { res.send('Hello World') });
+    router.use('/test', (req, res) => { res.send('Hello World') });
 
     //register middleware here
 
