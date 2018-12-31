@@ -10,27 +10,27 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Schema = new Schema({
+const schema = new Schema({
     firstName: {
         type: String,
-        required: true
+        
     },
     lastName: {
         type: String,
-        required: true,
+       
     },
     //Some doctors may have more than one specialty
-    specialty: [{ specialty: String, required: true }],
+    specialty: [{ specialty: String }],
     contractStatus: {
-        employeed: { type: Boolean, required: true }
+        employeed: { type: Boolean}
     },
     term: { year: Number, months: Number, start: Date, end: Date },
-    state: { type: String, required: true },
+    state: { type: String },
     facility: [{
-        name: { type: String, required: true },
+        name: { type: String },
         address: { street: String, city: String, suite: { type: Number, default: null } },
-        county: { type: String, required: true } //all hospitals in a given county can be queried as well as all physcians in a given county
+        county: { type: String } //all hospitals in a given county can be queried as well as all physcians in a given county
     }]
 })
 
-module.exports = { Schema };
+module.exports = { schema };
