@@ -1,3 +1,4 @@
+//setup the express and the express middleware
 express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
