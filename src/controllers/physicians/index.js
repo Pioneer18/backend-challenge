@@ -19,11 +19,11 @@ module.exports = (models, { config }) => {
     //on route api/v1/physicians/get call the get.js controller to retrieve specified physician(s)
     api.get('/get', get(models, { config }));
     //on route api/v1/physicians/create call the create.js controller to add a new physician to the db
-    api.get('/create', create(models, { config }));
+    api.post('/', create(models, { config }));
     //on route api/v1/physicians/update call the update.js controller to update the info on a physician(s) in the db
-    api.get('/update', update(models, { config }));
+    api.put('/:_id', update(models, { config }));
     //on route api/v1/physicians/remove call the remove.js controller to delete a physician from the d
-    api.get('/remove', remove(models, { config }));
+    api.delete('/:_id', remove(models, { config }));
 
 
     //this is now a function to return a route using the list.js physicians controller file
