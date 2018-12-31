@@ -11,9 +11,12 @@ const { list } = require('./list');
 /*place documentaion about controllers here*/
 
 //each route will have the models passed in as well as the config for config
-module.exports = ( models) => {
+module.exports = ( models, { config }) => {
     const api = router();
 
     //on route api/v1/physicians call the list.js controller to list all physicians
-    api.get('/', list(models));
+    api.get('/', list(models, { config }));
+
+    //this is now a function to return a route using the list.js physicians controller file
+    return api;
 }
