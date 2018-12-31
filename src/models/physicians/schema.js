@@ -1,3 +1,10 @@
+/**
+ * Schema Design
+ * embedded facility and county subdocument arrays containing hospital and counties, hospitals contain correlated county id's
+ * Assumption: 
+ *  1) no need for separate county or faciltiy(location) doucments, physicans contain them
+ *  2) Ok to delete Physicains and facility /county subdocuments. 
+ */
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -24,17 +31,12 @@ const Physician = new Schema({
             default: null,
         }
     },
-    location:{
-        county:String,
-        state: String,
-        city: string,
-        //physicians may work at more than one facility
-        facility:[
-            {
-                id: Schema.Types.ObjectId,
-                name:String, 
-                address:{street:String, city:String, state: String, zip: Number}
-            }
-        ]
-    }
+    state:{ type: String, required: true },
+    facility: [ { 
+        name: {type: String, required: true }, 
+        address:{ street: String, city: String, suite:{type: Number, default: null} }, 
+        county: { type: String, required: true } //all hospitals in a given county can be queried as well as all physcians in a given county
+    } ] 
 })
+
+module.exports = { Physician };
