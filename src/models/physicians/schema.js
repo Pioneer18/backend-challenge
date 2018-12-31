@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const physician = new Schema({
+const Physician = new Schema({
     firstName: {
         type: String,
         required: true
@@ -14,8 +14,6 @@ const physician = new Schema({
         type: [String], //Some doctors may have more than one specialty
         default: undefined
     },
-    //It may be easier to query doctors 
-    state:{ type: String, required: true }, 
     contractStatus: {
         employeed: {
             type: Boolean,
@@ -24,19 +22,19 @@ const physician = new Schema({
         hospitalGroup: {
             type: String,
             default: null,
-        },
-        //given a physician is employeed, they must have a facility (location) of work
-        facitlity: {
-            name: { type: String, required: true },
-            address: [{
-                street: { type: String, required: true },
-                suiteNum: { type: Number, default: null },
-                buildingNum: { type: Number, default: null },
-                city:{ type: String, required: true },
-                state:{ type: String, required: true },
-                zip: { type: Number, required: true}
-           }]
         }
-
+    },
+    location:{
+        county:String,
+        state: String,
+        city: string,
+        //physicians may work at more than one facility
+        facility:[
+            {
+                id: Schema.Types.ObjectId,
+                name:String, 
+                address:{street:String, city:String, state: String, zip: Number}
+            }
+        ]
     }
 })
