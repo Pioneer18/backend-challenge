@@ -3,7 +3,7 @@
 const app = require('./config/express');
 const config = require('./config/env/');
 const mongoose = require('mongoose');
-const api = require('./src/api');
+const api = require('./src/api/index');
 
 //setup mongoose (enable es6 promises and specify the database name/location)
 mongoose.Promise = Promise;
@@ -22,10 +22,12 @@ mongoose.connection.on('error', () => {
   }
 
 //api routes v1; register the src/api/index.js router and its relative routes (/physician, /test) 
+//serve the static public directory 
+app.use(express.static('public'));
 app.use('/ap/v1', api(config));
-app.use('/', ()=> {
+/*app.use('/', (req, res)=> {
   res.send('Welcome Friends');
-})
+})*/
 
 app.listen(config.port, ()=>{
     console.log(`api listening on port ${config.port} ${config.env}`);

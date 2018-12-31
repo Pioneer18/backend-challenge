@@ -8,7 +8,4 @@ app.use(bodyParser.json());
 //allow any data types inside of the parsed request object
 app.use(bodyParser.urlencoded({ extended: true }) );
 
-//serve the static public directory 
-app.use(express.static('public'));
-
 module.exports = app;

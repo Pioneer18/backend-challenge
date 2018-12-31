@@ -6,7 +6,7 @@ const create = require('./create');
 const remove = require('./remove');
 const get = require('./get');
 const update = require('./update');
-const list = require('./list');
+const { list } = require('./list');
 
 /*place documentaion about controllers here*/
 

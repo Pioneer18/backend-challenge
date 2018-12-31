@@ -4,7 +4,7 @@
 
 
 const list = ({ Physicians }, { config }) =>  (req, res, next) => {
-    res.send('This would be all the physicians');
+    return res.send('list of physicians')
 }
 
 module.exports = { list };
