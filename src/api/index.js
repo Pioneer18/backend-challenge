@@ -6,8 +6,8 @@ const express = require('express');
 
 //import middleware here to attach to router
 
-//import the models
-const models = require('./models');
+//import the model(s)
+const physicanModel = require('../api/models');
 
 //import physician controller to register to endpoint
 const physicians = require('./controllers/physicians');
@@ -17,7 +17,7 @@ const routersInit = config => {
 
     //register api points (endpoints with controllers)
     //at this reative endpoint, call the physicians controller with access to models and config
-    router.use('/physicians', physicians(models, { config }));
+    router.use('/physicians', physicians(physicanModel, { config }));
 
     router.use('/test', ()=> {
         res.send('Hello World');
