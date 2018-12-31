@@ -20,7 +20,8 @@ mongoose.connection.on('error', () => {
     mongoose.set('debug', true); //enable logging collection methods + arguments to the console
   }
 
-//routing, use the api directory as middleware 
+//api routes v1; register the src/api/index.js router and its relative routes (/physician, /test) 
+app.use('/ap/v1', api(config));
 
 app.listen(config.port, ()=>{
     console.log(`api listening on port ${config.port} ${config.env}`);
