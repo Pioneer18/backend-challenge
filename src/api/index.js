@@ -21,7 +21,7 @@ const routersInit = config => {
     const router = express();
 
     //register api points (endpoints with controllers)
-    //at this reative endpoint, call the physicians controller with access to models and config
+    //at this reative endpoint, call the physicians controller with access to model and the config passed from app.js
     router.use('/physicians', physicians(models, { config }));
 
     router.use('/test', (req, res) => { res.send('you have accessed the api routes') });

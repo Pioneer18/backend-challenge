@@ -15,5 +15,5 @@ module.exports = ( models) => {
     const api = router();
 
     //on route api/v1/physicians call the list.js controller to list all physicians
-    api.get('/')
+    api.get('/', list(models));
 }

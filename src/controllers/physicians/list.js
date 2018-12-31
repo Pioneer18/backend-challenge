@@ -3,8 +3,12 @@
 //perform an query of the db for all physicians
 
 
-const list = ({ Physicians }, { config }) =>  (req, res, next) => {
-    return res.send('list of physicians')
-}
+const list = ({ Physicians }) => async (req, res, next) => {
+    try {
+        res.send(200).send("this is a controller function");
+    } catch (error) {
+        next(error);
+    }
+};
 
 module.exports = { list };
