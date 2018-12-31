@@ -10,5 +10,4 @@ app.use(bodyParser.urlencoded({ extended: true }) );
 //serve the static public directory 
 app.use(express.static('public'));
 
-
-export default app;
+module.exports = app;

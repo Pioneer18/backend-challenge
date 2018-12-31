@@ -1,16 +1,15 @@
 /*this file - app.js - is the entry point to connect all files together, add additional functionality, and register static files*/
-//initialize express
+//config
 const app = require('./config/express');
-const config = require('./config/env');
+const config = require('./config/env/');
+const mongoose = require('mongoose');
+
 //setup mongoose (enable es6 promises and specify the database name/location)
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost:27017/physicians');
+mongoose.connect(config.db,{useNewUrlParser: true});
 
 //routing, use the api directory as middleware 
 
-//listen to port
-let PORT = 3000;
-
-app.listen(PORT, ()=>{
-    console.log("app listening on port 3000");
+app.listen(config.port, ()=>{
+    console.log(`api listening on port ${config.port} ${config.env}`);
 })
