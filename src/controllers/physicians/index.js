@@ -16,6 +16,7 @@ GET /api/v1/physicians - list
 GET /api/v1/physicians/:_id - get single physician
 
 POST /api/v1/physicians/ - create
+@header //add permission leve1
 @param 
     firstName (require) - {String}
     lastName (require) - {String}
@@ -25,6 +26,7 @@ POST /api/v1/physicians/ - create
     facility (require) - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
 
 PUT /api/v1/physicians/ - update
+@header //add permission level
 @param
     firstName - {String}
     lastName - {String}
@@ -33,7 +35,9 @@ PUT /api/v1/physicians/ - update
     state - {String}
     facility - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
 
-
+DELETE /api/v1/physicians/ - remove
+@header
+    //add permision level for this
 
 */
 
@@ -44,7 +48,7 @@ module.exports = (models, { config }) => {
     //on route api/v1/physicians call the list.js controller to list all physicians
     api.get('/', list(models, { config }));
     //on route api/v1/physicians/get call the get.js controller to retrieve specified physician(s)
-    api.get('/get', get(models, { config }));
+    api.get('/:_id', get(models, { config }));
     //on route api/v1/physicians/create call the create.js controller to add a new physician to the db
     api.post('/', create(models, { config }));
     //on route api/v1/physicians/update call the update.js controller to update the info on a physician(s) in the db
