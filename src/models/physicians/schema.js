@@ -17,20 +17,12 @@ const Physician = new Schema({
         type: String,
         required: true,
     },
-    specialty: {
-        type: [String], //Some doctors may have more than one specialty
-        default: undefined
-    },
+    //Some doctors may have more than one specialty
+    specialty: [ { specialty: String , required: true} ],
     contractStatus: {
-        employeed: {
-            type: Boolean,
-            required: true //if false the following should be undefined 
-        },
-        hospitalGroup: {
-            type: String,
-            default: null,
-        }
+        employeed: { type: Boolean, required: true }
     },
+    term: {year: Number, months: Number, start: Date, end: Date },
     state:{ type: String, required: true },
     facility: [ { 
         name: {type: String, required: true }, 
@@ -39,4 +31,4 @@ const Physician = new Schema({
     } ] 
 })
 
-module.exports = { Physician };
+module.exports = { Physicain };
