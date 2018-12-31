@@ -22,6 +22,9 @@ mongoose.connection.on('error', () => {
 
 //api routes v1; register the src/api/index.js router and its relative routes (/physician, /test) 
 app.use('/ap/v1', api(config));
+app.use('/', ()=> {
+  res.send('Welcome Friends');
+})
 
 app.listen(config.port, ()=>{
     console.log(`api listening on port ${config.port} ${config.env}`);
