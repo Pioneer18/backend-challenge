@@ -5,7 +5,7 @@
 
 const list = ({ Physicians }) => async (req, res, next) => {
     try {
-        res.send("this is a controller function");
+        res.send("listing all physicians in the db");
     } catch (error) {
         next(error);
     }
