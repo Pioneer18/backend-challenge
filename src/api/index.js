@@ -3,8 +3,7 @@
 //request at the endpoints
 
 const express = require('express');
-
-
+const { Authentication } = require('../middleware/basic-auth');
 //import middleware here to attach to router
 
 //import models; auth and physicians (models are capitalized)
@@ -22,7 +21,7 @@ const routersInit = config => {
 
     //register api points (endpoints with controllers)
     //at this reative endpoint, call the physicians controller with access to model and the config passed from app.js
-    router.use('/physicians', physicians(models, { config }));
+    router.use('/physicians', Authentication, physicians(models, { config }));
 
     router.use('/test', (req, res) => { res.send('you have accessed the api routes') });
 

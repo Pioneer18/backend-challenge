@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const api = require('./src/api/index');
 
 //temporairly setting up express-basic-auth on the main entry point
-const basicAuth = require('express-basic-auth');
+/*const basicAuth = require('express-basic-auth');
 //check incoming requests to match the below credentials ( admin:supersecret )
 app.use(basicAuth({
   users: { 
@@ -21,7 +21,7 @@ function getUnauthorizedResponse(req) {
   return req.auth
       ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')
       : 'No credentials provided'
-}
+}*/
 
 //setup mongoose (enable es6 promises and specify the database name/location)
 mongoose.Promise = Promise;
