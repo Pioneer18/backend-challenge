@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const basicAuth = require('express-basic-auth');
 //check incoming requests to match the below credentials ( admin:supersecret )
-app.use(basicAuth({
+const Authentication = basicAuth({
   users: { 
     'admin': 'supersecret', //admin can use all CRUD ops
     'guest': 'justlookin'   //guest can read only
@@ -10,7 +10,7 @@ app.use(basicAuth({
   challenge: false,
   unauthorizedResponse: getUnauthorizedResponse
   //NOTE: if a request is not authorized a message explaining why (and a 401 error) will be returned
-}))
+})
 
 
 function getUnauthorizedResponse(req) {
@@ -19,6 +19,6 @@ function getUnauthorizedResponse(req) {
       : 'No credentials provided'
 }
 
-const Authentication = basicAuth;
+
 
 module.exports = { Authentication };
