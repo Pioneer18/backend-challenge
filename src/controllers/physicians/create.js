@@ -1,4 +1,5 @@
 //add a new physician to the db
+
 const create = ({ Physicians }) => async (req, res, next) => {
     //validate the request
     if (!req.body) {

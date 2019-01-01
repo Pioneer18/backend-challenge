@@ -1,12 +1,12 @@
-//list all the physicians in the db
-//the actual route will accept the Physicians model and config as parameters and then
-//perform an query of the db for all physicians
-
+//retrieve and list all the physicians from the db
 
 const list = ({ Physicians }) => async (req, res, next) => {
     try {
-        res.send("listing all physicians in the db");
+        const allPhysicians = Physicians.find();
+        return allPhysicians;
+
     } catch (error) {
+        
         next(error);
     }
 };
