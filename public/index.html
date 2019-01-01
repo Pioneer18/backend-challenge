@@ -15,14 +15,12 @@
     <p>possiblity of creating a 'v2' of the api with different routes.</p>
     </br>   
     <ul>
-        <li><strong>"/" :</strong> loads this static html file in place of the a frontend app</li>
-        <li><strong>"/api/v1/physicians" :</strong> calls controller physicians/list.js to list all physicians</li>
-        <li><strong>"/api/v1/physicians/get" :</strong> calls controller physicians/get.js to find specific physician by id/name</li>
-        <li><strong>"/api/v1/physicians/create" :</strong> calls controller physicians/create.js to add a new physician to the db</li>
-        <li><strong>"/api/v1/physicians/update" :</strong> calls controller physicians/update.js to update the info of selected physician(s)</li>
-        <li><strong>"/api/v1/physicians/remove" :</strong> calls controller physicians/remove.js to delete a specific physician entry</li>
-        <li><strong>"/api/v1/physicians/" :</strong> calls controller physicians/</li>
-        <li><strong>"/api/v1/physicians/" :</strong> calls controller physicians/</li>
+        <li><strong> "/" :</strong> loads this static html file in place of the a frontend app</li>
+        <li><strong> GET "/api/v1/physicians" :</strong> calls controller physicians/list.js to list all physicians</li>
+        <li><strong> GET "/api/v1/physicians/:_id" :</strong> calls controller physicians/get.js to find specific physician by id/name</li>
+        <li><strong> POST "/api/v1/physicians/" :</strong> calls controller physicians/create.js to add a new physician to the db</li>
+        <li><strong> PUT "/api/v1/physicians/:_id" :</strong> calls controller physicians/update.js to update the info of selected physician(s)</li>
+        <li><strong> DELETE "/api/v1/physicians/:_id" :</strong> calls controller physicians/remove.js to delete a specific physician entry</li>
     </ul>
 </body>
 </html>
