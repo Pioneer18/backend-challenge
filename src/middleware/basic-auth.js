@@ -7,7 +7,7 @@ const Authentication = basicAuth({
     'admin': 'supersecret', //admin can use all CRUD ops
     'guest': 'justlookin'   //guest can read only
   },
-  challenge: false,
+  challenge: true,
   unauthorizedResponse: getUnauthorizedResponse
   //NOTE: if a request is not authorized a message explaining why (and a 401 error) will be returned
 })
