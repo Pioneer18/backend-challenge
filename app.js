@@ -7,8 +7,12 @@ const api = require('./src/api/index');
 
 //temporairly setting up express-basic-auth on the main entry point
 const basicAuth = require('express-basic-auth');
+//check incoming requests to match the below credentials ( admin:supersecret )
 app.use(basicAuth({
-  users: { 'admin': 'supersecret' }
+  users: { 
+    'admin': 'supersecret', //admin can use all CRUD ops
+    'guest': 'justlookin'   //guest can read only
+  }
 }))
 
 //setup mongoose (enable es6 promises and specify the database name/location)
