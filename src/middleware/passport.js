@@ -1,6 +1,7 @@
 const passport = rquire('passport');
 const Strategy = require('passport-local').Strategy;
 const db = require('../models');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 
 // Configure the local strategy for use by Passport.

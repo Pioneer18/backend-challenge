@@ -7,4 +7,6 @@ const schema = new Schema({
     password: String
 })
 
+schema.plugin(passportLocalMongoose);
+
 module.exports = { schema };
