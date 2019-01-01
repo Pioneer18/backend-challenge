@@ -22,9 +22,9 @@ const create = ({ Physicians }) => async (req, res, next) => {
     try {
         await physician.save();
         return res.send('Added a new Physician to the DB');
-        
+
     } catch (err) {
-        
+        next(err)
     }
 
 
