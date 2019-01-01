@@ -1,7 +1,7 @@
 //add a new physician to the db
 const create = ({ Physicians }) => async (req, res, next) => {
     //validate the request
-    if (!req.body.content) {
+    if (!req.body) {
         return res.status(400).send({
             message: "Please enter all physician data"
         });
@@ -21,7 +21,7 @@ const create = ({ Physicians }) => async (req, res, next) => {
     //save the Physician into the db now
     try {
         await physician.save();
-        return res.send('Added a new Physician to the DB');
+        return res.send(physician);
 
     } catch (err) {
         next(err)
