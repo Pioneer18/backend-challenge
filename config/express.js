@@ -7,7 +7,10 @@ const app = express();
 app.use(bodyParser.json());
 //allow any data types inside of the parsed request object
 app.use(bodyParser.urlencoded({ extended: true }) );
+//passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 //session handling for passport
-app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+app.use(require('express-session')({ secret: 'Hello World, this is a session', resave: false, saveUninitialized: false }));
 
 module.exports = app;
