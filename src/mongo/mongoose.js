@@ -1,5 +1,5 @@
 
-const mongooseInit = () => {
+const mongooseInit = (config) => {
     const mongoose = require('mongoose');
 
     //setup mongoose (enable es6 promises and specify the database name/location)
