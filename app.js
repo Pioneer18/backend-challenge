@@ -12,8 +12,16 @@ app.use(basicAuth({
   users: { 
     'admin': 'supersecret', //admin can use all CRUD ops
     'guest': 'justlookin'   //guest can read only
-  }
+  },
+  unauthorizedResponse: getUnauthorizedResponse
+  //NOTE: if a request is not authorized a message explaining why (and a 401 error) will be returned
 }))
+
+function getUnauthorizedResponse(req) {
+  return req.auth
+      ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')
+      : 'No credentials provided'
+}
 
 //setup mongoose (enable es6 promises and specify the database name/location)
 mongoose.Promise = Promise;
