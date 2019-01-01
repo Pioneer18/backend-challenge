@@ -24,7 +24,7 @@ const schema = new Schema({
     contractStatus: {
         employeed: { type: Boolean}
     },
-    term: { year: Number, months: Number, start: Date, end: Date },
+    term: { years: Number, months: Number, start: Date, end: Date },
     state: { type: String },
     facility: [{
         name: { type: String },

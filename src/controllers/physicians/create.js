@@ -12,10 +12,21 @@ const create = ({ Physicians }) => async (req, res, next) => {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         specialty: req.body.specialty,
-        contractStatus: req.body.contractStatus,
-        term: req.body.term,
+        contractStatus: {
+            employeed: req.body.contractStatus
+        },
+        term: {
+            years: req.body.termYears,
+            months: req.body.termMonths,
+            start: req.body.termStart,
+            end: req.body.termEnd
+        },
         state: req.body.state,
-        facility: req.body.facility
+        facility: [{
+            name: req.body.facilityName,
+            address: { street: req.body.facilityStreet, city: req.body.facilityCity, suite: req.body.facilitySuite },
+            county: req.body.facilityCity
+        }]
     });
 
     //save the Physician into the db now
