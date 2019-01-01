@@ -4,8 +4,7 @@ const basicAuth = require('express-basic-auth');
 //check incoming requests to match the below credentials ( admin:supersecret )
 const Authentication = basicAuth({
   users: { 
-    'admin': 'supersecret', //admin can use all CRUD ops
-    'guest': 'justlookin'   //guest can read only
+    'admin': 'carnahangroup', //admin can use all CRUD ops
   },
   challenge: true, //credentials are cached and auto used till browser restarts
   unauthorizedResponse: getUnauthorizedResponse
