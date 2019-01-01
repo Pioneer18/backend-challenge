@@ -5,7 +5,7 @@ const config = require('./config/env/');
 const api = require('./src/api/index');
 const mongoManager = require('./src/mongo/mongoose');
 
-//initialize mongoManager
+//initialize the mongoManager 
 mongoManager(config);
 
 //api routes v1; register the src/api/index.js router and its relative routes (/physician, /test) 

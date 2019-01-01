@@ -1,4 +1,4 @@
-//setup the express Router
+//Routes for CRUD ops on the Physician model
 const { Router: router } = require('express');
 //add middleware(permission levels, etc. here)
 //require all the subfiles for handling requests
