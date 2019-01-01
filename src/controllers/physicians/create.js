@@ -1,12 +1,22 @@
 //add a new physician to the db
 const create = ({ Physicians }) => async (req, res, next) => {
-    // Validate request
+    //validate the request
     if(!req.body.content) {
         return res.status(400).send({
             message: "Please enter all physician data"
         });
     }
 
+    //make a new instance of the Physicians model
+    const physician = new Physicians({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        specialty: req.body.specialty,
+        contractStatus: req.body.contractStatus,
+        term: req.body.term,
+        state: req.body.state,
+        facility: req.body.facility
+      });
     
 };
 
