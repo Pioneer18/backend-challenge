@@ -11,7 +11,7 @@ const create = ({ Physicians }) => async (req, res, next) => {
     const physician = new Physicians({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        specialty: [req.body.specialty],
+        specialty: [{specialty: req.body.specialty}],
         contractStatus: {
             employeed: req.body.contractStatus
         },
