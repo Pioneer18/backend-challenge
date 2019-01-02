@@ -3,8 +3,7 @@
 const facilityByCounty = ({ Physicians }) => async (req, res, next) => {
     try {
         let facilities = await Physicians.find({"facility.county": req.body.facilityCounty}).
-        where('firstName').equals('Jonathan').
-        where('lastName').equals('Sells')
+        select('facility.name')
         return res.send(facilities);
 
     } catch (error) {
