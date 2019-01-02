@@ -3,11 +3,20 @@
 const filtered = ({ Physicians }) => async (req, res, next) => {
     try {
         let filter = await Physicians.aggregate([
-            { "$match": { 
-                "firstName": req.body.firstName,
-                "lastName": req.body.lastName,
-                "specialty.specialty": req.body.specialty
-            }}
+            {
+                $project: {
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName,
+                    specialty: req.body.specialty,
+                    contractStatus: req.body.contractStatus,
+                    term: {
+                        years: req.body.termYears,
+                        months: req.body.termMonths,
+                        start: req.body.termStart,
+                        end: req.body.termEnd
+                    },
+                }
+            }
         ]);
         return res.send(filter);
 
