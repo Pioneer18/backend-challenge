@@ -1,16 +1,17 @@
 //retrieve and list all the physicians from the db
-/*
+
 const list = ({ Physicians }) => async (req, res, next) => {
     try {
-        await Physicians.find({});
-        return res.json(Physicians);
+        let listed = await Physicians.find();
+        return res.send(listed);
 
     } catch (error) {
 
         next(error);
     }
 };
-*/
+
+/*
 const list = ({ Physicians }) => (req, res, next) => {
     Physicians.find()
      .then( physicians => {
@@ -21,6 +22,6 @@ const list = ({ Physicians }) => (req, res, next) => {
              message: err.message || "error error error"
          })
      })
-}
+}*/
 
 module.exports = { list };
