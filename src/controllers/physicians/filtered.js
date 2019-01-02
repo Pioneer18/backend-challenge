@@ -4,7 +4,7 @@ const filtered = ({ Physicians }) => async (req, res, next) => {
     try {
         let filter = await Physicians.aggregate([
             {
-                $project: {
+                $match: {
                     firstName: req.body.firstName,
                     lastName: req.body.lastName,
                     specialty: req.body.specialty,
