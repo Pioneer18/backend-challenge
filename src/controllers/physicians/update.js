@@ -11,7 +11,7 @@ const update = ({ Physicians }) => async (req, res, next) => {
     try {
         //find the physician document and update it with the req.body
         //use req.params.physicianId to select the correct physician document
-        await Physicians.findByIdAndUpdate(req.params.physiciansId, {
+        let newPhysician = await Physicians.findOneAndUpdate(req.params.physiciansId, {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             specialty: [{ specialty: req.body.specialty }],
@@ -32,8 +32,11 @@ const update = ({ Physicians }) => async (req, res, next) => {
             }]
         }, {new: true}); //true to return the modified document rather than the original. defaults to false
 
+        //return the updated physician document
+        return res.send(newPhysician);
 
     } catch (error) {
+
         next(error);
     }
 };
