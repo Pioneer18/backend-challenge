@@ -1,4 +1,5 @@
 //Routes for CRUD ops on the Physician model
+
 const { Router: router } = require('express');
 //add middleware(permission levels, etc. here)
 //require all the subfiles for handling requests
@@ -36,8 +37,6 @@ module.exports = (models, { config }) => {
     //on route api/v1/physicians/remove call the remove.js controller to delete a physician from the d
     api.delete('/:_id', remove(models, { config }));
 
-
-
-    //this is now a function to return a route using the list.js physicians controller file
+    //This directory can now be imported as a function handling all of the contained endpoints relative to the main entry point 
     return api;
 }

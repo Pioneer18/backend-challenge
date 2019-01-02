@@ -21,8 +21,6 @@ const physicians = require('../controllers/physicians');
 models = { Physicians };
 
 
-
-
 /** 
 *----------------------------------- API Routes for Physician Controller------------------------------------------------------
 //DOCUMENTATION
@@ -38,14 +36,17 @@ GET /api/v1/filtered
 Returns: all Physician documents matching one or more of the search conditions
 query: find({ $or[{ ...search conditions... }] })
 
+
 GET /api/v1/facilityByCounty - facilityByConty.js
 @authorization basic
 Returns: all facility locations in the selected county
 query: find({ county }).select( facility.name, )
 
+
 GET /api/v1/physicians/:_id - get.js
 @authorization basic
 Returns: finds Physician document by _id
+
 
 POST /api/v1/physicians/ - create.js
 @authorization basic
@@ -76,18 +77,13 @@ query: findOneAndUpdate(_id, {...all physician fields...})
 
 DELETE /api/v1/physicians/ - remove.js
 @authorization basic
-Returns: deletes an _id selected Physician document    
+Returns: deletes a Physician document selected by _id      
 
-
+*----------------------------------- API Routes for Physician Controller ------------------------------------------------------
 */
 
 
-
-
-
-
-
-
+//Register the physicians controller to the path '/physicians' relative to the entry point path /api/v1/
 const routersInit = config => {
     const router = express();
 
@@ -96,8 +92,6 @@ const routersInit = config => {
     router.use('/physicians', Authentication, physicians(models, { config }));
 
     router.use('/test', (req, res) => { res.send('you have accessed the api routes') });
-
-    //register middleware here
 
     return router;
 };

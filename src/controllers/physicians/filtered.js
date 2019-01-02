@@ -1,6 +1,14 @@
 //retrieve and list all the physicians from the db matching the users inputed filter requirements
 
 const filtered = ({ Physicians }) => async (req, res, next) => {
+    
+    //ensure that there is data being passed into the db
+    if (!req.body) {
+        return res.status(400).send({
+            message: "Please select a physician"
+        });
+    }
+
     try {
         let filter = await Physicians.find({
             $or: [
