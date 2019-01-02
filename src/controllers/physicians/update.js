@@ -28,7 +28,7 @@ const update = ({ Physicians }) => async (req, res, next) => {
             facility: [{
                 name: req.body.facilityName,
                 address: { street: req.body.facilityStreet, city: req.body.facilityCity, suite: req.body.facilitySuite },
-                county: req.body.facilityCity
+                county: req.body.facilityCounty
             }]
         }, {new: true}); //true to return the modified document rather than the original. defaults to false
 

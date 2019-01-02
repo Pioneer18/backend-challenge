@@ -25,8 +25,12 @@ const create = ({ Physicians }) => async (req, res, next) => {
         state: req.body.state,
         facility: [{
             name: req.body.facilityName,
-            address: { street: req.body.facilityStreet, city: req.body.facilityCity, suite: req.body.facilitySuite },
-            county: req.body.facilityCity
+            address: { 
+                street: req.body.facilityStreet, 
+                city: req.body.facilityCity, 
+                suite: req.body.facilitySuite 
+            },
+            county: req.body.facilityCounty
         }]
     });
 
