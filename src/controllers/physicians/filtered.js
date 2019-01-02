@@ -2,10 +2,9 @@
 
 const filtered = ({ Physicians }) => async (req, res, next) => {
     try {
-        let filter = await Physicians.find({ 
-            firstName: req.body.firstName,
-            lastName: req.body.lastName
-        });
+        let filter = await Physicians.aggregate([
+            { "$match": { "firstName": req.body.firstName}}
+        ]);
         return res.send(filter);
 
     } catch (error) {
