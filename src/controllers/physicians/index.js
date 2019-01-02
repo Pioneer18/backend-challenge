@@ -38,7 +38,7 @@ Returns:
 POST /api/v1/physicians/ - create.js
 @authorization basic
 findOneAndUpdate() [CAUTION: user must enter ever path of a physician to be updated - or it will be turned to null] 
-@param 
+param 
     firstName (require) - {String}
     lastName (require) - {String}
     specialty (require) - {String}
