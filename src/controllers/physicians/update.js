@@ -12,7 +12,7 @@ const update = ({ Physicians }) => async (req, res, next) => {
         //find the physician document and update it with the req.body
         //use req.params.physicianId to select the correct physician document
         let newPhysician = await Physicians.findOneAndUpdate({_id: req.params._id}, {
-            firstName: req.body.update,
+            firstName: req.body.firstName,
             lastName: req.body.lastName,
             specialty: [{ specialty: req.body.specialty }],
             contractStatus: {
