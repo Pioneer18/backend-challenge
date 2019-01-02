@@ -4,6 +4,7 @@ const filtered = ({ Physicians }) => async (req, res, next) => {
     try {
         let filter = await Physicians.find(
             //find where the firstName and lastName paths match the client input (from a search)
+            
             {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
