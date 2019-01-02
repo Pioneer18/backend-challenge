@@ -19,7 +19,7 @@ const filtered = ({ Physicians }) => async (req, res, next) => {
                 { "facility.address.suite": req.body.facilitySuite },
                 { "facility.county": req.body.facilityCounty }
             ]
-        }, null, { limit: 50 })
+        }, { limit: 50 })
         return res.send(filter);
 
     } catch (error) {

@@ -12,18 +12,32 @@ const { facilityByCounty } = require('./facilityByCounty');
 
 
 /** 
-*API for physicians
+*----------------------------------- API Routes for Physician Controller------------------------------------------------------
+//DOCUMENTATION
 
-GET /api/v1/physicians
+GET /api/v1/physicians - list.js
+@ Authorization baisc
+Returns: all physician documents in the collection
+query: find() 
+
 
 GET /api/v1/filtered
+@authorization basic
+Returns: all Physician documents matching one or more of the search conditions
+query: find({ $or[{ ...search conditions... }] })
 
-GET /api/v1/facilityByCounty
+GET /api/v1/facilityByCounty - facilityByConty.js
+@authorization basic
+Returns: all facility locations in the selected county
+query: find({ county }).select( facility.name, )
 
-GET /api/v1/physicians/:_id - get single physician
+GET /api/v1/physicians/:_id - get.js
+@authorization basic
+Returns: 
 
-POST /api/v1/physicians/ - create
-@authorization basic-static username:password
+POST /api/v1/physicians/ - create.js
+@authorization basic
+findOneAndUpdate() [CAUTION: user must enter ever path of a physician to be updated - or it will be turned to null] 
 @param 
     firstName (require) - {String}
     lastName (require) - {String}
@@ -33,8 +47,9 @@ POST /api/v1/physicians/ - create
     facility (require) - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
 
 
-PUT /api/v1/physicians/:_id - findOneAndUpdate() [CAUTION: user must enter ever path of a physician to be updated - or it will be turned to null] 
-@authorization basic-static username:password
+PUT /api/v1/physicians/:_id - update.js
+@authorization basic
+Returns: findOneAndUpdate() [CAUTION: user must enter ever path of a physician to be updated - or it will be turned to null] 
 @param
     firstName - {String}
     lastName - {String}
@@ -43,9 +58,11 @@ PUT /api/v1/physicians/:_id - findOneAndUpdate() [CAUTION: user must enter ever 
     state - {String}
     facility - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
 
-DELETE /api/v1/physicians/ - remove
-@header
-    //add permision level for this
+
+DELETE /api/v1/physicians/ - remove.js
+@authorization basic
+Returns:     
+
 
 */
 
