@@ -1,5 +1,6 @@
-const express = require('express');
-const app = express();
+//Baisc Auth middleware
+
+
 const basicAuth = require('express-basic-auth');
 //check incoming requests to match the below credentials ( admin:supersecret )
 const Authentication = basicAuth({
