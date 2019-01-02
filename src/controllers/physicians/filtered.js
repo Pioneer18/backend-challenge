@@ -2,7 +2,7 @@
 
 const filtered = ({ Physicians }) => async (req, res, next) => {
     try {
-        let filter = await Physicians.aggregate([
+        let filter = await Physicians./*.aggregate([
             {
                 $match: {
                     firstName: req.body.firstName,
@@ -23,7 +23,20 @@ const filtered = ({ Physicians }) => async (req, res, next) => {
                     }]
                 }
             }
-        ]);
+        ]);*/
+        find({
+            firstName:req.body.firstName,
+            lastName: req.body.lastName,
+            "specialty.specialty": req.body.specialty,
+            "contractStatus.employeed": req.body.contractStatus,
+            "term.years": req.body.termYears,
+            "term.months": req.body.termMonths,
+            "term.start": req.body.termStart,
+            "term.end": req.body.termEnd,
+            state: req.body.state
+            
+            
+        })
         return res.send(filter);
 
     } catch (error) {
