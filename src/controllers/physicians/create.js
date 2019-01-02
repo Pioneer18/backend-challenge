@@ -12,7 +12,7 @@ const create = ({ Physicians }) => async (req, res, next) => {
     const physician = new Physicians({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        specialty: [{specialty: req.body.specialty}],
+        specialty: [{ specialty: req.body.specialty }],
         contractStatus: {
             employeed: req.body.contractStatus
         },
@@ -25,10 +25,10 @@ const create = ({ Physicians }) => async (req, res, next) => {
         state: req.body.state,
         facility: [{
             name: req.body.facilityName,
-            address: { 
-                street: req.body.facilityStreet, 
-                city: req.body.facilityCity, 
-                suite: req.body.facilitySuite 
+            address: {
+                street: req.body.facilityStreet,
+                city: req.body.facilityCity,
+                suite: req.body.facilitySuite
             },
             county: req.body.facilityCounty
         }]

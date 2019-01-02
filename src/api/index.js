@@ -22,7 +22,7 @@ const routersInit = config => {
     //register api points (endpoints with controllers)
     //at this reative endpoint, call the physicians controller with access to model and the config passed from app.js
     router.use('/physicians', Authentication, physicians(models, { config }));
-    
+
     router.use('/test', (req, res) => { res.send('you have accessed the api routes') });
 
     //register middleware here
