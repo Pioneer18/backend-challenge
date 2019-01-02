@@ -1,8 +1,12 @@
 //delete a specific physician(s) from the db
 const remove = ({ Physicians }) => async (req, res, next) => {
     try {
-        res.send("deleting a physician from the db");
+
+        let deleted = await Physicians.findOneAndRemove(req.params._id);
+        return res.send(deleted)
+
     } catch (error) {
+
         next(error);
     }
 };
