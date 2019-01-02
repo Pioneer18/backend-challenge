@@ -33,9 +33,12 @@ const filtered = ({ Physicians }) => async (req, res, next) => {
             "term.months": req.body.termMonths,
             "term.start": req.body.termStart,
             "term.end": req.body.termEnd,
-            state: req.body.state
-            
-            
+            state: req.body.state,
+            "facility.name": req.body.facilityName,
+            "facility.address.street": req.body.facilityStreet,
+            "facility.address.city": req.body.facilityCity,
+            "facility.address.suite": req.body.facilitySuite,
+            "facility.county": req.body.facilityCounty,
         })
         return res.send(filter);
 
