@@ -7,6 +7,7 @@ const { remove } = require('./remove');
 const { get } = require('./get');
 const { update } = require('./update');
 const { list } = require('./list');
+const { filtered } = require('./filtered');
 
 /** 
 *API for physicians
@@ -48,7 +49,7 @@ module.exports = (models, { config }) => {
     //on route api/v1/physicians call the list.js controller to list all physicians
     api.get('/', list(models, { config }));
     //on route api/v1/filtered call the filtered.js controller to list all physician filtered by user input
-    api.get('/filtered'. filtered(models, { config }));
+    api.get('/filtered', filtered(models, { config }));
     //on route api/v1/physicians/get call the get.js controller to retrieve specified physician(s)
     api.get('/:_id', get(models, { config }));
     //on route api/v1/physicians/create call the create.js controller to add a new physician to the db

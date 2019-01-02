@@ -1,6 +1,6 @@
 //retrieve and list all the physicians from the db matching the users inputed filter requirements
 
-const filterd = ({ Physicians }) => async (req, res, next) => {
+const filtered = ({ Physicians }) => async (req, res, next) => {
     try {
         let filter = await Physicians.find(
             //find where the firstName and lastName paths match the client input (from a search)
@@ -20,8 +20,12 @@ const filterd = ({ Physicians }) => async (req, res, next) => {
                 state: req.body.state,
                 facility: [{
                     name: req.body.facilityName,
-                    address: { street: req.body.facilityStreet, city: req.body.facilityCity, suite: req.body.facilitySuite },
-                    county: req.body.facilityCity
+                    address: {
+                        street: req.body.facilityStreet, 
+                        city: req.body.facilityCity, 
+                        suite: req.body.facilitySuite 
+                    },
+                county: req.body.facilityCity
                 }]
             });
         return res.send(filter);
@@ -32,4 +36,4 @@ const filterd = ({ Physicians }) => async (req, res, next) => {
     }
 };
 
-module.exports = { filterd };
+module.exports = { filtered };
