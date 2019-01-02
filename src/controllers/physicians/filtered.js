@@ -15,6 +15,12 @@ const filtered = ({ Physicians }) => async (req, res, next) => {
                         start: req.body.termStart,
                         end: req.body.termEnd
                     },
+                    state: req.body.state,
+                    facility:[{
+                        name:req.body.facilityName,
+                        address: { street: req.body.facilityStreet, city: req.body.facilityCity, suite: req.body.facilitySuite},
+                        county: req.body.facilityCounty
+                    }]
                 }
             }
         ]);
