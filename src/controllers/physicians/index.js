@@ -11,7 +11,7 @@ const { list } = require('./list');
 /** 
 *API for physicians
 
-GET /api/v1/physicians - list
+GET /api/v1/physicians?filtered
 
 GET /api/v1/physicians/:_id - get single physician
 
@@ -25,7 +25,7 @@ POST /api/v1/physicians/ - create
     state (require) - {String}
     facility (require) - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
 
-PUT /api/v1/physicians/ - update
+PUT /api/v1/physicians/:_id
 @header //add permission level
 @param
     firstName - {String}
@@ -47,6 +47,8 @@ module.exports = (models, { config }) => {
 
     //on route api/v1/physicians call the list.js controller to list all physicians
     api.get('/', list(models, { config }));
+    //on route api/v1/filtered call the filtered.js controller to list all physician filtered by user input
+    api.get('/filtered'. filtered(models, { config }));
     //on route api/v1/physicians/get call the get.js controller to retrieve specified physician(s)
     api.get('/:_id', get(models, { config }));
     //on route api/v1/physicians/create call the create.js controller to add a new physician to the db
