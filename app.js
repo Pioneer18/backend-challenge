@@ -1,4 +1,9 @@
-/*this file - app.js - is the entry point to connect all files together, add additional functionality, and register static files*/
+/**
+ * this file - app.js - is the entry point to import and synchronize all of the api directories and files 
+ * this file registers the api routes to the endpoint /api/v1/ to preserve the current code incase of a hypothetical v2
+ * the server is serving a index.html file that has documentation on each of the available routes for the api
+ * route documentation is also available in the src/api/index.js file
+ * */
 //config
 const app = require('./config/express');
 const config = require('./config/env/');
