@@ -1,3 +1,10 @@
+//Mongoose Setup
+
+/**
+ * moongoose init is called by the app on the main entry point 
+ * with config passed in from the imported config directory
+ */
+
 
 const mongooseInit = (config) => {
     const mongoose = require('mongoose');
@@ -8,14 +15,14 @@ const mongooseInit = (config) => {
 
     //mongoose connection event handlers
     mongoose.connection.on('error', () => {
-    throw new Error(`unable to connect to database: ${config.db}`);
+        throw new Error(`unable to connect to database: ${config.db}`);
     });
     mongoose.connection.on('connected', () => {
-    console.log(`Connected to database: ${config.db}`);
+        console.log(`Connected to database: ${config.db}`);
     });
 
     if (config.env === 'development') {
-    mongoose.set('debug', true); //enable logging collection methods + arguments to the console
+        mongoose.set('debug', true); //enable logging collection methods + arguments to the console
     }
 }
 
