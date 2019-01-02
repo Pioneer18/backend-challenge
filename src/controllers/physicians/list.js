@@ -2,11 +2,11 @@
 
 const list = ({ Physicians }) => async (req, res, next) => {
     try {
-        const allPhysicians = Physicians.find();
-        return allPhysicians;
+        await Physicians.find({});
+        return res.json(Physicians);
 
     } catch (error) {
-        
+
         next(error);
     }
 };
