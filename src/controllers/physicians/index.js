@@ -73,9 +73,6 @@ module.exports = (models, { config }) => {
     //on route api/v1/physicians call the list.js controller to list all physicians
     api.get('/', list(models, { config }));
 
-    //on route api/v1/physicians/:_id call the get controller to find physician document by _id 
-    //api.get('/:_id', get(models, { config }));
-
     //on route api/v1/filtered call the filtered.js controller to list all physician filtered by user input
     api.get('/filtered', filtered(models, { config }));
 
