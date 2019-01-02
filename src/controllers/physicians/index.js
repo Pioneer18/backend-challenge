@@ -9,6 +9,7 @@ const { update } = require('./update');
 const { list } = require('./list');
 const { filtered } = require('./filtered');
 const { facilityByCounty } = require('./facilityByCounty');
+const { custom } = require('./custom');
 
 /** 
 *API for physicians
@@ -53,6 +54,8 @@ module.exports = (models, { config }) => {
 
     //on route api/v1/physicians call the list.js controller to list all physicians
     api.get('/', list(models, { config }));
+    //on route api/v1/physicians/custom call the custom.js controller to perform custom physician search
+    api.get('/custom', custom(models, { config }));
     //on route api/v1/filtered call the filtered.js controller to list all physician filtered by user input
     api.get('/filtered', filtered(models, { config }));
     //on route api/v1/facilityByCounty call the facilityByCounty.js controller to find all facility locations in a selected county

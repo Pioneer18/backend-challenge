@@ -25,7 +25,7 @@ const custom = ({ Physicians }) => async (req, res, next) => {
         }).
         select({
             //use the request parameters to grab from a second form or dropdown the paths the 
-            //user would like to return from their search conditions
+            //user would like to return from their search
             $or: [
                 { firstName: req.params.firstName },
                 { lastName: req.params.lastName },
