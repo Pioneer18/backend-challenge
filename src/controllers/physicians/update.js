@@ -11,7 +11,7 @@ const update = ({ Physicians }) => async (req, res, next) => {
     try {
         //find the physician document and update it with the req.body
         //use req.params.physicianId to select the correct physician document
-        Physicians.findByIdAndUpdate(req.params, {
+        await Physicians.findByIdAndUpdate(req.params.physiciansId, {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             specialty: [{ specialty: req.body.specialty }],
@@ -30,7 +30,7 @@ const update = ({ Physicians }) => async (req, res, next) => {
                 address: { street: req.body.facilityStreet, city: req.body.facilityCity, suite: req.body.facilitySuite },
                 county: req.body.facilityCity
             }]
-        });
+        }, {new: true}); //true to return the modified document rather than the original. defaults to false
 
 
     } catch (error) {
