@@ -28,9 +28,7 @@ const filtered = ({ Physicians }) => async (req, res, next) => {
                     },
                     county: req.body.facilityCity
                 }]
-            }).populate({
-                
-            })
+            });
         return res.send(filter);
 
     } catch (error) {
