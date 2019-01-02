@@ -1,7 +1,17 @@
 //update the info on a specific physician(s)
+
 const update = ({ Physicians }) => async (req, res, next) => {
+    //validate the request
+    if(!req.body) {
+        return res.status(400).send({
+            message: "Please select a physician"
+        });
+    }    
+    
     try {
-        res.send("updating a physician(s) info in the db");
+
+
+
     } catch (error) {
         next(error);
     }
