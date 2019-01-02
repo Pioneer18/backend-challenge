@@ -8,11 +8,16 @@ const { get } = require('./get');
 const { update } = require('./update');
 const { list } = require('./list');
 const { filtered } = require('./filtered');
+const { facilityByCounty } = require('./facilityByCounty');
 
 /** 
 *API for physicians
 
-GET /api/v1/physicians?filtered
+GET /api/v1/physicians
+
+GET /api/v1/filtered
+
+GET /api/v1/facilityByCounty
 
 GET /api/v1/physicians/:_id - get single physician
 
@@ -50,6 +55,8 @@ module.exports = (models, { config }) => {
     api.get('/', list(models, { config }));
     //on route api/v1/filtered call the filtered.js controller to list all physician filtered by user input
     api.get('/filtered', filtered(models, { config }));
+    //on route api/v1/facilityByCounty call the facilityByCounty.js controller to find all facility locations in a selected county
+    api.get('/facilityByCounty', facilityByCounty(models, { config }));
     //on route api/v1/physicians/get call the get.js controller to retrieve specified physician(s)
     api.get('/:_id', get(models, { config }));
     //on route api/v1/physicians/create call the create.js controller to add a new physician to the db
