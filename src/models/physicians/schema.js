@@ -13,16 +13,16 @@ const Schema = mongoose.Schema;
 const schema = new Schema({
     firstName: {
         type: String,
-        
+
     },
     lastName: {
         type: String,
-       
+
     },
     //Some doctors may have more than one specialty
     specialty: [{ specialty: String }],
     contractStatus: {
-        employeed: { type: Boolean}
+        employeed: { type: Boolean }
     },
     term: { years: Number, months: Number, start: Date, end: Date },
     state: { type: String },
