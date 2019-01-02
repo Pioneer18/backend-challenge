@@ -64,7 +64,7 @@ query: findOneAndUpdate(_id, {...all physician fields...})
 
 DELETE /api/v1/physicians/ - remove.js
 @authorization basic
-Returns:     
+Returns: deletes an _id selected Physician document    
 
 
 */

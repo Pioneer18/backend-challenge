@@ -2,7 +2,7 @@
 
 const get = ({ Physicians }) => async (req, res, next) => {
     try {
-        let physician = await Physicians.findOne(req.params.physiciansId);
+        let physician = await Physicians.findOne({ _id: req.params.PhysicianId});
         return res.send(physician);
     } catch (error) {
         next(error);
