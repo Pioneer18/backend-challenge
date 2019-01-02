@@ -26,10 +26,10 @@ const custom = ({ Physicians }) => async (req, res, next) => {
         select({
             //use the request parameters to grab from a second form or dropdown the paths the 
             //user would like to return from their search
-            $or: [
-                { firstName: req.params.firstName },
-                { lastName: req.params.lastName },
-                { "specialty.specialty": req.params.specialty },
+            
+                 firstName: 1,
+                 lastName: 1
+                /*{ "specialty.specialty": req.params.specialty },
                 { "contractStatus.employeed": req.params.contractStatus },
                 { "term.years": req.params.termYears },
                 { "term.months": req.params.termMonths },
@@ -41,7 +41,7 @@ const custom = ({ Physicians }) => async (req, res, next) => {
                 { "facility.address.city": req.params.facilityCity },
                 { "facility.address.suite": req.params.facilitySuite },
                 { "facility.county": req.params.facilityCounty }
-            ]
+            ]*/
         })
         return res.send(matches);
 
