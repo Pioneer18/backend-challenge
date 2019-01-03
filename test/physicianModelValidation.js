@@ -12,10 +12,7 @@ const { create } = require('../src/controllers/physicians/create');
 //run test with Mocha and chai
 describe('Physcian Model Validation', (done) => {
     //this makes a new empty Physicians instance
-    const empty = new Physicians();
-
-    //pass empty to the create controller, to attempt saving an empty physician instance
-    const p = create(empty, { config });
+    const p = new Physicians({ });
 
     p.validate(err => {
         expect(err.errors.Physicians).to.not.exist; //Physician.save() with no required paths
