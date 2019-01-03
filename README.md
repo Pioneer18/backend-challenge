@@ -44,30 +44,30 @@ more advance mongodb querying can be added to achieve strict filtering
 
 
 
-## GET /api/v1/physicians** - list.js
+## GET /api/v1/physicians - list.js
 - @ Authorization baisc -
 - Returns: all physician documents in the collection
 - query: find() 
 
 
-**GET /api/v1/physicians/filtered** - filtered.js
+**GET /api/v1/physicians/filtered - filtered.js
 - @authorization basic -
 - Returns: all Physician documents matching one or more of the search conditions
 - query: find({ $or[{ ...search conditions... }] })
 
 
-## GET /api/v1/physicians/facilityByCounty** - facilityByConty.js
+## GET /api/v1/physicians/facilityByCounty - facilityByConty.js
 - @authorization basic -
 - Returns: all facility locations in the selected county
 - query: find({ county }).select( facility.name, )
 
 
-## GET /api/v1/physicians/:_id** - get.js
+## GET /api/v1/physicians/:_id - get.js
 - @authorization basic -
 - Returns: finds Physician document by _id
 
 
-## POST /api/v1/physicians/** - create.js
+## POST /api/v1/physicians/ - create.js
 - @authorization  -
 - returns: a new physician document
 - [CAUTION: all fields required]
@@ -79,7 +79,7 @@ more advance mongodb querying can be added to achieve strict filtering
     - state (require) - {String}
     - facility (require) - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
 
-## PUT /api/v1/physicians/:_id** - update.js
+## PUT /api/v1/physicians/:_id - update.js
 - @authorization basic -
 - returns: _id selected user document is updated with the new physician path values that the user inputed
 - query: findOneAndUpdate(_id, {...all physician fields...}) 
@@ -93,6 +93,6 @@ more advance mongodb querying can be added to achieve strict filtering
     * facility - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
 
 
-## DELETE /api/v1/physicians/** - remove.js
+## DELETE /api/v1/physicians/ - remove.js
 - @authorization basic -
 - Returns: deletes a Physician document selected by _id
