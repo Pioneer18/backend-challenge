@@ -3,6 +3,15 @@ The back-end of an application to group all the physicians in Tampa
 
 API Route Documentation
 
+//REQUIREMENTS
+* A Physician can have multiple inputs: Name, last name, state, specialty, contract status, facility(location) and term length. 
+* The counties have multiple hospitals. Each hospital has multiple Physicians.
+* Assume that it only applies to Tampa, FL.
+* Assume that Carnahan Groups is the owner of this application, so there are no external users or third parties involved.
+* Use any kind of authentication (basic, Oath, etc).
+
+
+
 //DOCUMENTATION
 
 GET /api/v1/physicians - list.js
