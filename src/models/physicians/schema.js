@@ -12,24 +12,24 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
     firstName: {
-        type: String,
+        type: String, required: true
 
     },
     lastName: {
-        type: String,
+        type: String, required: true
 
     },
     //Some doctors may have more than one specialty
-    specialty: [{ specialty: String }],
+    specialty: [{ specialty: String, required: true }],
     contractStatus: {
-        employeed: { type: Boolean }
+        employeed: { type: Boolean, required: true }
     },
-    term: { years: Number, months: Number, start: Date, end: Date },
-    state: { type: String },
+    term: { years: { type: Number, required: true }, months: { type: Number, required: true }, start: { type: Date, required: true }, end: { type: Date, required: true } },
+    state: { type: String, required: true },
     facility: [{
-        name: { type: String },
-        address: { street: String, city: String, suite: { type: Number, default: null } },
-        county: { type: String } //all hospitals in a given county can be queried as well as all physcians in a given county
+        name: { type: String, required: true },
+        address: { street: {type: String, required: true}, city: {type: String, required: true}, suite: { type: Number, required: true } },
+        county: { type: String, required: true } //all hospitals in a given county can be queried as well as all physcians in a given county
     }]
 })
 
