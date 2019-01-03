@@ -4,9 +4,6 @@ The back-end of an application to group all the physicians in Tampa
 
 ***Note: JSON file of Physician Collection is included in files @ 'backend-challenge/PhysicianCollection.json'***
 
-
-API Route Documentation
-
 //REQUIREMENTS
 * A Physician can have multiple inputs: Name, last name, state, specialty, contract status, facility(location) and term length. 
 * The counties have multiple hospitals. Each hospital has multiple Physicians.
@@ -39,7 +36,7 @@ Morgan or Winston logging could be added for more verbose error logging
 routes could be consolidated with express routes string patterns allowing a single http method endpoint to service multiple operations
 more advance mongodb querying can be added to achieve strict filtering 
 
-//DOCUMENTATION
+**=================================API ROUTES DOCUMENTATION=================================**
 
 **GET /api/v1/physicians** - list.js
 @ Authorization baisc
