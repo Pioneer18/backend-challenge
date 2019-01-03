@@ -14,15 +14,15 @@ The back-end of an application to group all the physicians in Tampa
 
 
 #SOLUTION
--API Routes allow user to create new Physcian Documents, 
--get all documents, 
--get all documents meeting one or more of user search conditions,
--get all documents containing a selected county name and return related facility location names,
--get a specific document by id (e.g. click on the link to open a id selected document)
--get and update a specific document by id (e.g. click on a documnent and update any updated paths in the document),
--delete a document selected by id (e.g. click on document link and delete it),
--post a new document with inputed physcian data,
--all CRUD op routes are basic auth protected by userName: admin passWord: carnahangroup
+- API Routes allow user to create new Physcian Documents, 
+- get all documents, 
+- get all documents meeting one or more of user search conditions,
+- get all documents containing a selected county name and return related facility location names,
+- get a specific document by id (e.g. click on the link to open a id selected document)
+- get and update a specific document by id (e.g. click on a documnent and update any updated paths in the document),
+- delete a document selected by id (e.g. click on document link and delete it),
+- post a new document with inputed physcian data,
+- all CRUD op routes are basic auth protected by userName: admin passWord: carnahangroup
 
 
 #TESTING
