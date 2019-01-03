@@ -3,11 +3,12 @@
 const facilityByCounty = ({ Physicians }) => async (req, res, next) => {
 
     //ensure the user has entered a county to query
-    if (!req.body) {
+    //this needs to be imported validation middleware from utility directory
+    /*if (!req.body) {
         return res.status(400).send({
             message: "Please select a physician"
         });
-    }
+    }*/
 
     try {
         let facilities = await Physicians.find({ "facility.county": req.body.facilityCounty }).
