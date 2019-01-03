@@ -36,7 +36,7 @@ Morgan or Winston logging could be added for more verbose error logging
 routes could be consolidated with express routes string patterns allowing a single http method endpoint to service multiple operations
 more advance mongodb querying can be added to achieve strict filtering 
 
-**=================================API ROUTES DOCUMENTATION=================================**
+**===API ROUTES DOCUMENTATION===**
 
 **GET /api/v1/physicians** - list.js
 @ Authorization baisc
