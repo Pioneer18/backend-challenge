@@ -14,22 +14,22 @@ The back-end of an application to group all the physicians in Tampa
 
 
 ## SOLUTION
-- API Routes allow user to create new Physcian Documents, 
-- get all documents, 
-- get all documents meeting one or more of user search conditions,
-- get all documents containing a selected county name and return related facility location names,
-- get a specific document by id (e.g. click on the link to open a id selected document)
-- get and update a specific document by id (e.g. click on a documnent and update any updated paths in the document),
-- delete a document selected by id (e.g. click on document link and delete it),
-- post a new document with inputed physcian data,
-- all CRUD op routes are basic auth protected by userName: admin passWord: carnahangroup
+- **API Routes allow user to: 
+- get all Physician documents, 
+- get all Physician documents meeting one or more of the user's search conditions,
+- get all of the facility locations in a selected county; e.g. all hospitals in Hillsborough,
+- get a specific Physician document by id (e.g. click on the link to open a id selected document)
+- get and update a specific Physician document by id (e.g. click on a documnent and update any updated paths in the document),
+- delete a Physician document selected by id (e.g. click on document link and delete it),
+- post (create) a Physician new document with inputed physcian data,
+- all CRUD operation routes are **basic auth** protected by userName: admin passWord: carnahangroup
 
 
 ## TESTING
 - Mocha is used to run javascript Unit Testing 
 - Chai is used for easy assertions
 - Sinon is imported for stubs.
-- NOTE: there is a physicianModel.js test file, however the routes have only been informally tested on Postman
+- NOTE: there is a PhysicianModel.js test file to test built in mongoose schema validation, however the routes have only been informally tested on Postman
 
 ## IMPROVEMENTS
 - Testing with Mocha needs to be added for the CRUD Routes,
