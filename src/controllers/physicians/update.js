@@ -14,7 +14,7 @@ const update = ({ Physicians }) => async (req, res, next) => {
         let newPhysician = await Physicians.findOneAndUpdate({ _id: req.params._id }, {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            specialty: [{ specialty: req.body.specialty }],
+            specialty: req.body.specialty,
             contractStatus: {
                 employeed: req.body.contractStatus
             },
