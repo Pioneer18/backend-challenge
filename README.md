@@ -11,6 +11,29 @@ API Route Documentation
 * Use any kind of authentication (basic, Oath, etc).
 
 
+//SOLUTION
+API Routes allow user to create new Physcian Documents, 
+get all documents, 
+get all documents meeting one or more of user search conditions,
+get all documents containing a selected county name and return related facility location names,
+get a specific document by id (e.g. click on the link to open a id selected document)
+get and update a specific document by id (e.g. click on a documnent and update any updated paths in the document),
+delete a document selected by id (e.g. click on document link and delete it),
+post a new document with inputed physcian data,
+all CRUD op routes are basic auth protected by userName: admin passWord: carnahangroup
+
+
+//TESTING
+Mocha is used to run javascript Unit Testing 
+Chai is used for easy assertions
+Sinon is imported for stubs
+NOTE: there is a physicianModel.js test file, however the routes have only been informally tested on Postman
+
+//IMPROVEMENTS
+Testing with Mocha needs to be added for the CRUD Routes, only the built-in MongoDB model validator required is being tested 
+Morgan or Winston logging could be added for more verbose error logging
+routes could be consolidated with express routes string patterns allowing a single http method endpoint to service multiple operations
+more advance mongodb querying can be added to achieve strict filtering 
 
 //DOCUMENTATION
 
