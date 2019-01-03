@@ -2,7 +2,7 @@
 The back-end of an application to group all the physicians in Tampa
 
 
-***Note: JSON file of Physician Collection is included in files @ './PhysicianCollection.json'***
+***Note: JSON file of Physician Collection is included in files @ 'backend-challenge/PhysicianCollection.json'***
 
 
 API Route Documentation
