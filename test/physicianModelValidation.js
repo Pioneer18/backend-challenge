@@ -10,10 +10,10 @@ const { Physicians } = require('../src/models/physicians');
 //run test with Mocha and chai
 describe('Physcian Model Validation', (done) => {
     //this makes a new empty Physicians instance
-    const p = new Physicians({ });
+    const p = new Physicians();
 
     p.validate( function(err) {
-        expect(err.errors.firstName).to.exist; //Physician.save() with no required paths
+        expect(err.errors).to.exist; //Physician.save() with no required paths
         done();
     })
 })
