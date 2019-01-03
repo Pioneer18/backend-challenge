@@ -3,11 +3,12 @@
 const filtered = ({ Physicians }) => async (req, res, next) => {
     
     //ensure that there is data being passed into the db
-    if (!req.body) {
+    //this function needs to be a utility validator
+    /*if (!req.body) {
         return res.status(400).send({
             message: "Please select a physician"
         });
-    }
+    }*/
 
     try {
         let filter = await Physicians.find({

@@ -2,11 +2,12 @@
 
 const create = ({ Physicians }) => async (req, res, next) => {
     //validate the request
-    if (!req.body) {
+    //this validator needs to be a utility imported validator
+    /*if (!req.body) {
         return res.status(400).send({
             message: "Please enter all physician data"
         });
-    }
+    }*/
 
     //make a new instance of the Physicians model
     const physician = new Physicians({
