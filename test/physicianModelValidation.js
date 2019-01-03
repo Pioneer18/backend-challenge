@@ -10,7 +10,7 @@ describe('Physcian Model Validation', (done) => {
     const p = new Physicians({});
 
     p.validate( err => {
-        expect(err.errors.Physicians).to.exist; //Physician.save() with no required paths
+        expect(err.errors.Physicians).to.not.exist; //Physician.save() with no required paths
         done();
     })
 })
