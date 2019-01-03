@@ -5,7 +5,7 @@ The back-end of an application to group all the physicians in Tampa
 ***Note: JSON file of Physician Collection is included in files @ 'backend-challenge/PhysicianCollection.json'***
 
 
-##REQUIREMENTS
+#REQUIREMENTS
 * A Physician can have multiple inputs: Name, last name, state, specialty, contract status, facility(location) and term length. 
 * The counties have multiple hospitals. Each hospital has multiple Physicians.
 * Assume that it only applies to Tampa, FL.
@@ -13,7 +13,7 @@ The back-end of an application to group all the physicians in Tampa
 * Use any kind of authentication (basic, Oath, etc).
 
 
-##SOLUTION
+#SOLUTION
 -API Routes allow user to create new Physcian Documents, 
 -get all documents, 
 -get all documents meeting one or more of user search conditions,
@@ -25,13 +25,13 @@ The back-end of an application to group all the physicians in Tampa
 -all CRUD op routes are basic auth protected by userName: admin passWord: carnahangroup
 
 
-##TESTING
+#TESTING
 -Mocha is used to run javascript Unit Testing 
 -Chai is used for easy assertions
 -Sinon is imported for stubs.
 -NOTE: there is a physicianModel.js test file, however the routes have only been informally tested on Postman
 
-##IMPROVEMENTS
+#IMPROVEMENTS
 -Testing with Mocha needs to be added for the CRUD Routes,
 -only the built-in MongoDB model validator required is being tested. 
 -Morgan or Winston logging could be added for more verbose error logging.
@@ -70,12 +70,12 @@ more advance mongodb querying can be added to achieve strict filtering
 -returns: a new physician document
 -[CAUTION: all fields required]
 -@param 
-    *firstName (require) - {String}
-    *lastName (require) - {String}
-    *specialty (require) - {String}
-    *term (require) - {String}
-    *state (require) - {String}
-    *facility (require) - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
+    -firstName (require) - {String}
+    -lastName (require) - {String}
+    -specialty (require) - {String}
+    -term (require) - {String}
+    -state (require) - {String}
+    -facility (require) - [{ name: String , address: {String, String, Number}, county: (require) - {String} }]
 
 
 **PUT /api/v1/physicians/:_id** - update.js
