@@ -2,8 +2,7 @@
 
 //import chai for easy assertions
 const expect = require('chai').expect;
-//import the mongoose config
-const config = require('../config/env');
+
 //import the physician model to validate
 const { Physicians } = require('../src/models/physicians');
 
