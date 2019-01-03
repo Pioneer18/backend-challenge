@@ -14,7 +14,7 @@ const schema = new Schema({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     //Some doctors may have more than one specialty
-    specialty: { specialty: { type: [String], required: true } },
+    specialty: { type: String, required: true},
     /* contractStatus: {
          employeed: { type: Boolean, required: true }
      },
