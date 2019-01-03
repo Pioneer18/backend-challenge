@@ -12,8 +12,8 @@ describe('Physcian Model Validation', (done) => {
     //this makes a new empty Physicians instance
     const p = new Physicians({ });
 
-    p.validate(err => {
-        expect(err.errors.Physicians).to.exist; //Physician.save() with no required paths
+    p.validate( function(err) {
+        expect(err.errors.firstName).to.exist; //Physician.save() with no required paths
         done();
     })
 })
