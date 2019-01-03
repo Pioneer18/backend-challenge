@@ -2,16 +2,22 @@
 
 //import chai for easy assertions
 const expect = require('chai').expect;
+//import the mongoose config
+const config = require('../config/env');
 //import the physician model to validate
-const  { Physicians }  = require('../src/models/physicians');
+const { Physicians } = require('../src/models/physicians');
 //import the actual controller function that creates a new Physician 
 const { create } = require('../src/controllers/physicians/create');
 
 //run test with Mocha and chai
 describe('Physcian Model Validation', (done) => {
-    const p = new Physicians({});
+    //this makes a new empty Physicians instance
+    const empty = new Physicians();
 
-    p.validate( err => {
+    //pass empty to the create controller, to attempt saving an empty physician instance
+    const p = create(empty, { config });
+
+    p.validate(err => {
         expect(err.errors.Physicians).to.not.exist; //Physician.save() with no required paths
         done();
     })
