@@ -14,7 +14,7 @@ const filtered = ({ Physicians }) => async (req, res, next) => {
             $or: [
                 { firstName: req.body.firstName },
                 { lastName: req.body.lastName },
-                { "specialty.specialty": req.body.specialty },
+                { specialty: req.body.specialty },
                 { "contractStatus.employeed": req.body.contractStatus },
                 { "term.years": req.body.termYears },
                 { "term.months": req.body.termMonths },
