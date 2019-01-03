@@ -1,0 +1,742 @@
+[
+    {
+      "_id": {
+        "$oid": "5c2d88f4c77ee9133c3be0fb"
+      },
+      "firstName": "Pier",
+      "lastName": "Frank",
+      "specialty": "Family Medicine",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 10,
+        "months": 120,
+        "start": {
+          "$date": "2019-03-01T05:00:00.000Z"
+        },
+        "end": {
+          "$date": "2029-03-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d88f4c77ee9133c3be0fc"
+          },
+          "name": "Family Medicine",
+          "address": {
+            "street": "15511 N Florida Avenue",
+            "city": "Tampa",
+            "suite": 438
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d8b69e162721aa43e55d9"
+      },
+      "firstName": "Alan",
+      "lastName": "Lezzi",
+      "specialty": "Family Medicine",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 5,
+        "months": 120,
+        "start": {
+          "$date": "2019-07-01T04:00:00.000Z"
+        },
+        "end": {
+          "$date": "2024-07-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d8b69e162721aa43e55da"
+          },
+          "name": "AdventHealth Medical Group Famil Medicine",
+          "address": {
+            "street": "15511 N Florida Avenue",
+            "city": "Tampa",
+            "suite": 401
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d8ed8e162721aa43e55db"
+      },
+      "firstName": "Charmine",
+      "lastName": "Henry",
+      "specialty": "Family Medicine",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 3,
+        "months": 120,
+        "start": {
+          "$date": "2019-07-01T04:00:00.000Z"
+        },
+        "end": {
+          "$date": "2021-07-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d8ed8e162721aa43e55dc"
+          },
+          "name": "AdventHealth Medical Group Famil Medicine",
+          "address": {
+            "street": "15511 N Florida Avenue",
+            "city": "Tampa",
+            "suite": 401
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d8f13e162721aa43e55dd"
+      },
+      "firstName": "Tiffany",
+      "lastName": "Patrick",
+      "specialty": "OBGYN",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 8,
+        "months": 120,
+        "start": {
+          "$date": "2019-07-01T04:00:00.000Z"
+        },
+        "end": {
+          "$date": "2027-07-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d91da6bcb183600d7944e"
+          },
+          "name": "Women's Care",
+          "address": {
+            "street": "3321 W Bears Ave",
+            "city": "Tampa",
+            "suite": 345
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d92066bcb183600d7944f"
+      },
+      "firstName": "Tiffany",
+      "lastName": "Patrick",
+      "specialty": "OBGYN",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 7,
+        "months": 120,
+        "start": {
+          "$date": "2019-07-01T04:00:00.000Z"
+        },
+        "end": {
+          "$date": "2028-07-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d92066bcb183600d79450"
+          },
+          "name": "AdventHealth Medical Group Famil Medicine",
+          "address": {
+            "street": "3321 W Bearss AVe",
+            "city": "Tampa",
+            "suite": 255
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d92a16bcb183600d79451"
+      },
+      "firstName": "Kristen ",
+      "lastName": "Segall",
+      "specialty": "OBGYN",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 4,
+        "months": 48,
+        "start": {
+          "$date": "2019-01-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2023-01-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d92a16bcb183600d79452"
+          },
+          "name": "Womens Care",
+          "address": {
+            "street": "3321 W Bearss AVe",
+            "city": "Tampa",
+            "suite": 355
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d92db6bcb183600d79453"
+      },
+      "firstName": "Brian",
+      "lastName": "McNulty",
+      "specialty": "OBGYN",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 2,
+        "months": 24,
+        "start": {
+          "$date": "2019-01-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2021-01-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d92db6bcb183600d79454"
+          },
+          "name": "Womens Care",
+          "address": {
+            "street": "3321 W Bearss AVe",
+            "city": "Tampa",
+            "suite": 55
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d93686bcb183600d79455"
+      },
+      "firstName": "Stepahnie ",
+      "lastName": "Baldwin",
+      "specialty": "Foot and Ankle Surgery, Poidatry",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 12,
+        "months": 24,
+        "start": {
+          "$date": "2015-06-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2027-06-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d93686bcb183600d79456"
+          },
+          "name": "North Tampa Foot Care",
+          "address": {
+            "street": "1706 W Bearss AVe",
+            "city": "Tampa",
+            "suite": 12
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d93aa6bcb183600d79457"
+      },
+      "firstName": "Michael",
+      "lastName": "Waldman",
+      "specialty": "Podiatry",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 7,
+        "months": 84,
+        "start": {
+          "$date": "2015-06-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2022-06-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d93aa6bcb183600d79458"
+          },
+          "name": "North Tampa Foot Care",
+          "address": {
+            "street": "1706 W Bearss AVe",
+            "city": "Tampa",
+            "suite": 15
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d93f46bcb183600d79459"
+      },
+      "firstName": "Arelne ",
+      "lastName": "Lobo",
+      "specialty": "Podiatry",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 7,
+        "months": 84,
+        "start": {
+          "$date": "2015-06-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2022-06-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d93f46bcb183600d7945a"
+          },
+          "name": "Cardiology Carrollwood",
+          "address": {
+            "street": "1706 W Bearss 3665 Madaca Ln",
+            "city": "Tampa",
+            "suite": 4
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d94546bcb183600d7945b"
+      },
+      "firstName": "Sally ",
+      "lastName": "Soo",
+      "specialty": "Cardiovascular Disease",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 4,
+        "months": 48,
+        "start": {
+          "$date": "2019-03-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2023-03-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d94546bcb183600d7945c"
+          },
+          "name": "Cardiology Carrollwood",
+          "address": {
+            "street": "3665 Madaca Lane",
+            "city": "Tampa",
+            "suite": 4
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d94c16bcb183600d7945d"
+      },
+      "firstName": "Carolyn",
+      "lastName": "Marasco",
+      "specialty": "Pediatrics",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 20,
+        "months": 240,
+        "start": {
+          "$date": "2019-03-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2039-03-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d94c16bcb183600d7945e"
+          },
+          "name": "Health Point Medical Group",
+          "address": {
+            "street": "14499 N Dale Mabry Hwy",
+            "city": "Tampa",
+            "suite": 230
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d94eb6bcb183600d7945f"
+      },
+      "firstName": "Jacqueline",
+      "lastName": "Niebles",
+      "specialty": "Pediatrics",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 20,
+        "months": 240,
+        "start": {
+          "$date": "2019-03-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2039-03-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d94eb6bcb183600d79460"
+          },
+          "name": "Health Point Medical Group",
+          "address": {
+            "street": "14499 N Dale Mabry Hwy",
+            "city": "Tampa",
+            "suite": 180
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d95856bcb183600d79461"
+      },
+      "firstName": "Steven",
+      "lastName": "Knezevich",
+      "specialty": "orthopedic Surgery",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 15,
+        "months": 180,
+        "start": {
+          "$date": "2019-02-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2034-02-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d95856bcb183600d79462"
+          },
+          "name": "Northside Orthopedics",
+          "address": {
+            "street": "3820 Northdale Blvd",
+            "city": "Tampa",
+            "suite": 105
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d96126bcb183600d79463"
+      },
+      "firstName": "Marceline",
+      "lastName": "Abadeer",
+      "specialty": "Cardiologist",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 10000,
+        "months": 1200000,
+        "start": {
+          "$date": "2019-02-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "+012019-02-01T05:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d96126bcb183600d79464"
+          },
+          "name": "Northside Orthopedics",
+          "address": {
+            "street": "3820 Northdale Blvd",
+            "city": "Tampa",
+            "suite": 0
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d96886bcb183600d79465"
+      },
+      "firstName": "Finn",
+      "lastName": "Mertens",
+      "specialty": "General Practicioner",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 17,
+        "months": 192,
+        "start": {
+          "$date": "2019-02-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2031-02-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d96886bcb183600d79466"
+          },
+          "name": "Southside Orthopedics",
+          "address": {
+            "street": "2038 Southdale Blvd",
+            "city": "Tampa",
+            "suite": 0
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d97026bcb183600d79467"
+      },
+      "firstName": "Jake",
+      "lastName": "N/A",
+      "specialty": "Trauma Surgeon",
+      "contractStatus": {
+        "employeed": false
+      },
+      "term": {
+        "years": 17,
+        "months": 192,
+        "start": {
+          "$date": "2019-02-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2031-02-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d97026bcb183600d79468"
+          },
+          "name": "Tampa General",
+          "address": {
+            "street": "1 Tampa General Cir",
+            "city": "Tampa",
+            "suite": 0
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d977e6bcb183600d79469"
+      },
+      "firstName": "Angelo ",
+      "lastName": "Fernandes",
+      "specialty": "Gastroenterology",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 6,
+        "months": 72,
+        "start": {
+          "$date": "2019-09-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2026-09-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d977e6bcb183600d7946a"
+          },
+          "name": "Tampa Gastroenterology at Carrollwood",
+          "address": {
+            "street": "14130 N Dale Mabry Hwy",
+            "city": "Tampa",
+            "suite": 306
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d9c06630b214c145b713b"
+      },
+      "firstName": "Yvonne",
+      "lastName": "Santiago",
+      "specialty": "Internal Medicine",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 8,
+        "months": 84,
+        "start": {
+          "$date": "2019-09-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2027-09-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d9c06630b214c145b713c"
+          },
+          "name": "Medicine at Carrollwood",
+          "address": {
+            "street": "14130 N Dale Mabry Hwy",
+            "city": "Tampa",
+            "suite": 300
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "5c2d9c81630b214c145b713d"
+      },
+      "firstName": "Monica",
+      "lastName": "Rider",
+      "specialty": "Family Medicine",
+      "contractStatus": {
+        "employeed": true
+      },
+      "term": {
+        "years": 2,
+        "months": 24,
+        "start": {
+          "$date": "2019-09-01T00:00:00.000Z"
+        },
+        "end": {
+          "$date": "2021-09-01T00:00:00.000Z"
+        }
+      },
+      "state": "FL",
+      "facility": [
+        {
+          "_id": {
+            "$oid": "5c2d9c81630b214c145b713e"
+          },
+          "name": "Tampa Family Health Centers",
+          "address": {
+            "street": "3353 W Bearss Ave",
+            "city": "Tampa",
+            "suite": 225
+          },
+          "county": "Hilllsborough"
+        }
+      ],
+      "__v": 0
+    }
+  ]
