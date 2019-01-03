@@ -5,7 +5,7 @@ The back-end of an application to group all the physicians in Tampa
 ***Note: JSON file of Physician Collection is included in files @ 'backend-challenge/PhysicianCollection.json'***
 
 
-#REQUIREMENTS
+# REQUIREMENTS
 * A Physician can have multiple inputs: Name, last name, state, specialty, contract status, facility(location) and term length. 
 * The counties have multiple hospitals. Each hospital has multiple Physicians.
 * Assume that it only applies to Tampa, FL.
