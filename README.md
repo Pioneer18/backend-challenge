@@ -27,12 +27,12 @@ all CRUD op routes are basic auth protected by userName: admin passWord: carnaha
 //TESTING
 Mocha is used to run javascript Unit Testing 
 Chai is used for easy assertions
-Sinon is imported for stubs
+Sinon is imported for stubs.
 NOTE: there is a physicianModel.js test file, however the routes have only been informally tested on Postman
 
 //IMPROVEMENTS
-Testing with Mocha needs to be added for the CRUD Routes, only the built-in MongoDB model validator required is being tested 
-Morgan or Winston logging could be added for more verbose error logging
+Testing with Mocha needs to be added for the CRUD Routes, only the built-in MongoDB model validator required is being tested. 
+Morgan or Winston logging could be added for more verbose error logging.
 routes could be consolidated with express routes string patterns allowing a single http method endpoint to service multiple operations
 more advance mongodb querying can be added to achieve strict filtering 
 
