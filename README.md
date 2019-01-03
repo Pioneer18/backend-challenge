@@ -42,6 +42,8 @@ more advance mongodb querying can be added to achieve strict filtering
 
 # API ROUTES DOCUMENTATION
 
+
+
 ## GET /api/v1/physicians** - list.js
 - @ Authorization baisc -
 - Returns: all physician documents in the collection
