@@ -4,6 +4,8 @@
 const expect = require('chai').expect;
 //import the physician model to validate
 const  { Physicians }  = require('../src/models/physicians');
+//import the actual controller function that creates a new Physician 
+const { create } = require('../src/controllers/physicians/create');
 
 //run test with Mocha and chai
 describe('Physcian Model Validation', (done) => {
