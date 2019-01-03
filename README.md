@@ -14,7 +14,7 @@ The back-end of an application to group all the physicians in Tampa
 
 
 ## SOLUTION
-- **API Routes allow user to: 
+- **API Routes allow user to:** 
 - get all Physician documents, 
 - get all Physician documents meeting one or more of the user's search conditions,
 - get all of the facility locations in a selected county; e.g. all hospitals in Hillsborough,
