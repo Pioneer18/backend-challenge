@@ -70,7 +70,7 @@ more advance mongodb querying can be added to achieve strict filtering
 ###### POST /api/v1/physicians/ - create.js
 - @authorization  -
 - returns: a new physician document
-- [CAUTION: all fields required]
+- [**CAUTION:** all fields required]
 - @param 
     - firstName (require) - {String}
     - lastName (require) - {String}
@@ -83,7 +83,7 @@ more advance mongodb querying can be added to achieve strict filtering
 - @authorization basic -
 - returns: _id selected user document is updated with the new physician path values that the user inputed
 - query: findOneAndUpdate(_id, {...all physician fields...}) 
-- [CAUTION: front end should open document to be edited and leave all physician fields the same until user changes them, changed fields  will be reflected in the updated document] 
+- [**CAUTION:** front end should open document to be edited and leave all physician fields the same until user changes them, changed fields  will be reflected in the updated document] 
 - @param
     * firstName - {String}
     * lastName - {String}
