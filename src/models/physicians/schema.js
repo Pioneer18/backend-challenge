@@ -11,20 +11,20 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    firstName: {type: String, required: true},
-    lastName: {type: String, required: true},
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
     //Some doctors may have more than one specialty
-    specialty: [{ specialty: String }],
-   /* contractStatus: {
-        employeed: { type: Boolean, required: true }
-    },
-    term: { years: { type: Number, required: true }, months: { type: Number, required: true }, start: { type: Date, required: true }, end: { type: Date, required: true } },
-    state: { type: String, required: true },
-    facility: [{
-        name: { type: String, required: true },
-        address: { street: {type: String, required: true}, city: {type: String, required: true}, suite: { type: Number, required: true } },
-        county: { type: String, required: true } //all hospitals in a given county can be queried as well as all physcians in a given county
-    }]*/
+    specialty: { specialty: { type: [String], required: true } },
+    /* contractStatus: {
+         employeed: { type: Boolean, required: true }
+     },
+     term: { years: { type: Number, required: true }, months: { type: Number, required: true }, start: { type: Date, required: true }, end: { type: Date, required: true } },
+     state: { type: String, required: true },
+     facility: [{
+         name: { type: String, required: true },
+         address: { street: {type: String, required: true}, city: {type: String, required: true}, suite: { type: Number, required: true } },
+         county: { type: String, required: true } //all hospitals in a given county can be queried as well as all physcians in a given county
+     }]*/
 })
 
 module.exports = { schema };
